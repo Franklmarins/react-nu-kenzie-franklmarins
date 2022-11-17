@@ -1,4 +1,5 @@
 .filter-div {
+  width: 90%;
   max-width: 560px;
 }
 .filter-div > h3 {
@@ -12,6 +13,12 @@
   display: flex;
   justify-content: space-between;
 }
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
 
 @media (max-width: 900px) {
   .filter-div {
@@ -19,5 +26,8 @@
     flex-direction: column;
     gap: 12px;
     align-items: center;
+  }
+  .transactions-list {
+    gap: 16px;
   }
 }

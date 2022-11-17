@@ -9,10 +9,10 @@ const TotalMoney = ({ listTransactions }) => {
         <p>O valor se refere ao saldo</p>
       </div>
       <h3>
-        R${" "}
         {listTransactions
           .map((transaction) => transaction.value)
-          .reduce((previus, current) => Number(previus) + Number(current), 0)}
+          .reduce((previus, current) => Number(previus) + Number(current), 0)
+          .toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
       </h3>
     </div>
   );

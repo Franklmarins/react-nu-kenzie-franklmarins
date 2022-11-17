@@ -28,7 +28,7 @@ const List = ({ listTransactions, setListTransactions }) => {
           />
         </div>
       </div>
-      <ul>
+      <ul className="transactions-list">
         {listTransactions.map((transaction, index) => (
           <Card
             transaction={transaction}
