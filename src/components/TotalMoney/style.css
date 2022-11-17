@@ -1,0 +1,29 @@
+.total-money-div {
+  max-width: 363px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--grey-2);
+  border-radius: var(--border-radius-2);
+}
+.total-money-div > h3 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-1);
+  color: var(--color-primary);
+}
+
+.total-money-div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.total-money-div > div > h3 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-1);
+  color: var(--grey-4);
+}
+.total-money-div > div > p {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-2);
+  color: var(--grey-4);
+}

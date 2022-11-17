@@ -1,6 +1,20 @@
 import React from "react";
+import { ExcludeButton } from "../Button";
 
-const Card = ({ transaction, index }) => {
+const Card = ({
+  transaction,
+  index,
+  listTransactions,
+  setListTransactions,
+}) => {
+  const exclude = (item) => {
+    const newList = listTransactions.filter(
+      (transaction) => item != transaction
+    );
+
+    setListTransactions(newList);
+  };
+
   return (
     <li
       key={index}
@@ -16,7 +30,7 @@ const Card = ({ transaction, index }) => {
       </div>
       <div>
         <span>{transaction.value}</span>
-        <button>Excluir</button>
+        <ExcludeButton exclude={exclude} transaction={transaction} />
       </div>
     </li>
   );

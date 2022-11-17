@@ -1,45 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import FilterButton from "../Button";
 import Card from "../Card";
-import { useState } from "react";
+import "./style.css";
 
-const List = ({ listTransactions }) => {
+const List = ({ listTransactions, setListTransactions }) => {
   const [listFiltered, setListFiltered] = useState(listTransactions);
 
   return (
-    <section>
-      <div>
+    <section className="container">
+      <div className="filter-div">
         <h3>Resumo financeiro</h3>
         <div>
-          <button
-            onClick={() => {
-              setListFiltered(listTransactions);
-            }}
-          >
-            Todos
-          </button>
-          <button
-            onClick={() => {
-              setListFiltered(
-                listTransactions.filter((e) => e.type === "entrada")
-              );
-            }}
-          >
-            Entradas
-          </button>
-          <button
-            onClick={() => {
-              setListFiltered(
-                listTransactions.filter((e) => e.type === "saida")
-              );
-            }}
-          >
-            Despesas
-          </button>
+          <FilterButton
+            listTransactions={listTransactions}
+            setListFiltered={setListFiltered}
+            type="Todos"
+          />
+          <FilterButton
+            listTransactions={listTransactions}
+            setListFiltered={setListFiltered}
+            type="Entradas"
+          />
+          <FilterButton
+            listTransactions={listTransactions}
+            setListFiltered={setListFiltered}
+            type="Despesas"
+          />
         </div>
       </div>
       <ul>
-        {listFiltered.map((transaction, index) => (
-          <Card transaction={transaction} key={index} />
+        {listTransactions.map((transaction, index) => (
+          <Card
+            transaction={transaction}
+            key={index}
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+          />
         ))}
       </ul>
     </section>

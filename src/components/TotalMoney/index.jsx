@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 
 const TotalMoney = ({ listTransactions }) => {
   return (
-    <div>
+    <div className="container total-money-div">
       <div>
         <h3>Valor total:</h3>
         <p>O valor se refere ao saldo</p>

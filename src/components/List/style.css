@@ -1,0 +1,23 @@
+.filter-div {
+  max-width: 560px;
+}
+.filter-div > h3 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-1);
+  color: var(--grey-4);
+}
+.filter-div > div {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .filter-div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
