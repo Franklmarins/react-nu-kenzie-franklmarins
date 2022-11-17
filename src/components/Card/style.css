@@ -1,0 +1,26 @@
+li {
+  width: 90%;
+  max-width: 560px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background: var(--grey-1);
+  border-radius: var(--border-radius-2);
+}
+.title-description-card > h3 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-1);
+  color: var(--grey-4);
+}
+.title-description-card > span {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-2);
+  color: var(--grey-3);
+}
+
+.value-btn-card {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
