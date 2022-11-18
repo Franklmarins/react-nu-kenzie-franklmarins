@@ -1,15 +1,25 @@
 section {
+  margin-top: 39px;
+}
+.form-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
   gap: 16px;
-  width: 50%;
+  width: 45%;
+}
+.list-section {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
 }
 
-@media (max-width: 800px) {
-  section {
+@media (max-width: 1000px) {
+  .form-section {
+    align-items: center;
     margin-top: 20px;
+    width: 100%;
+  }
+  .list-section {
     width: 100%;
   }
 }

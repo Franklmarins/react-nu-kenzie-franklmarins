@@ -1,8 +1,9 @@
 .filter-div {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 560px;
+  margin-bottom: 24px;
 }
 .filter-div > h3 {
   font-size: var(--font-size-4);
@@ -18,12 +19,12 @@
 .transactions-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
-  align-items: center;
   gap: 16px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
   .filter-div {
     flex-direction: column;
     gap: 12px;
@@ -31,5 +32,6 @@
   }
   .transactions-list {
     width: 100%;
+    align-items: center;
   }
 }

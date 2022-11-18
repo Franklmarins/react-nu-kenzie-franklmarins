@@ -8,7 +8,7 @@ header > div {
   justify-content: space-between;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   header {
     padding: 15px 0;
   }

@@ -1,6 +1,5 @@
 li {
   width: 100%;
-  max-width: 560px;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -25,7 +24,7 @@ li {
   gap: 27px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   li {
     max-width: 363px;
   }

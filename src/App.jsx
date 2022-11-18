@@ -12,17 +12,19 @@ const App = () => {
     <div className="App">
       <Header />
       <main className="container">
-        <section>
+        <section className="form-section">
           <Form
             listTransactions={listTransactions}
             setListTransactions={setListTransactions}
           />
           <TotalMoney listTransactions={listTransactions} />
         </section>
-        <List
-          listTransactions={listTransactions}
-          setListTransactions={setListTransactions}
-        />
+        <section className="list-section">
+          <List
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+          />
+        </section>
       </main>
     </div>
   );

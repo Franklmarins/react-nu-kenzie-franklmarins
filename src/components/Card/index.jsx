@@ -18,7 +18,6 @@ const Card = ({
 
   return (
     <li
-      className="container"
       key={index}
       style={
         transaction.type === "entrada"
