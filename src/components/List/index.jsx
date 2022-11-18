@@ -7,7 +7,7 @@ const List = ({ listTransactions, setListTransactions }) => {
   const [listFiltered, setListFiltered] = useState(listTransactions);
 
   return (
-    <section className="container">
+    <section>
       <div className="filter-div">
         <h3>Resumo financeiro</h3>
         <div>

@@ -14,7 +14,6 @@ const Form = ({ listTransactions, setListTransactions }) => {
 
   return (
     <form
-      className="container"
       onSubmit={(event) => {
         event.preventDefault();
         setListTransactions([

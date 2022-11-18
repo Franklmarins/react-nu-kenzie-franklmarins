@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <main>
+      <main className="container">
         <section>
           <Form
             listTransactions={listTransactions}
