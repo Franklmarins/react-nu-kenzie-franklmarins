@@ -8,6 +8,7 @@ import TotalMoney from "./components/TotalMoney";
 
 const App = () => {
   const [listTransactions, setListTransactions] = useState([]);
+
   const [page, setPage] = useState(true);
 
   return page ? (

@@ -5,34 +5,26 @@ import { NoCard } from "../NoCard";
 import "./style.css";
 
 const List = ({ listTransactions, setListTransactions }) => {
-  const [listFiltered, setListFiltered] = useState(listTransactions);
+  const [filter, setFilter] = useState("");
+
+  const filtered = listTransactions.filter((transaction) =>
+    transaction.type.includes(filter || transaction.type)
+  );
 
   return (
     <>
       <div className="filter-div">
         <h3>Resumo financeiro</h3>
         <div>
-          <FilterButton
-            listTransactions={listTransactions}
-            setListFiltered={setListFiltered}
-            type="Todos"
-          />
-          <FilterButton
-            listTransactions={listTransactions}
-            setListFiltered={setListFiltered}
-            type="Entradas"
-          />
-          <FilterButton
-            listTransactions={listTransactions}
-            setListFiltered={setListFiltered}
-            type="Despesas"
-          />
+          <FilterButton setFilter={setFilter} type="Todos" />
+          <FilterButton setFilter={setFilter} type="Entradas" />
+          <FilterButton setFilter={setFilter} type="Despesas" />
         </div>
       </div>
 
       <ul className="transactions-list">
         {listTransactions.length > 0 ? (
-          listTransactions.map((transaction, index) => (
+          filtered.map((transaction, index) => (
             <Card
               transaction={transaction}
               key={index}

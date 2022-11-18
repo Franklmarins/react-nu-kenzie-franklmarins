@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-const FilterButton = ({ listTransactions, setListFiltered, type }) => {
+const FilterButton = ({ setFilter, type }) => {
   return type === "Todos" ? (
     <button
       className="filter-btn"
       onClick={() => {
-        setListFiltered(listTransactions);
+        setFilter("");
       }}
     >
       {type}
@@ -15,7 +15,7 @@ const FilterButton = ({ listTransactions, setListFiltered, type }) => {
     <button
       className="filter-btn"
       onClick={() => {
-        setListFiltered(listTransactions.filter((e) => e.type === "entrada"));
+        setFilter("entrada");
       }}
     >
       {type}
@@ -24,7 +24,7 @@ const FilterButton = ({ listTransactions, setListFiltered, type }) => {
     <button
       className="filter-btn"
       onClick={() => {
-        setListFiltered(listTransactions.filter((e) => e.type === "saida"));
+        setFilter("saida");
       }}
     >
       {type}
