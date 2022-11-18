@@ -23,6 +23,11 @@
   width: 100%;
   gap: 16px;
 }
+.no-louch {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-1);
+  color: var(--grey-4);
+}
 
 @media (max-width: 1300px) {
   .filter-div {
@@ -33,5 +38,8 @@
   .transactions-list {
     width: 100%;
     align-items: center;
+  }
+  .no-louch {
+    font-size: var(--font-size-4);
   }
 }

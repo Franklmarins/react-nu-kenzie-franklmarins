@@ -17,7 +17,9 @@ const App = () => {
             listTransactions={listTransactions}
             setListTransactions={setListTransactions}
           />
-          <TotalMoney listTransactions={listTransactions} />
+          {listTransactions.length > 0 ? (
+            <TotalMoney listTransactions={listTransactions} />
+          ) : null}
         </section>
         <section className="list-section">
           <List
