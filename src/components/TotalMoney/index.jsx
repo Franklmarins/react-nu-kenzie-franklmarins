@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const TotalMoney = ({ listTransactions }) => {
+export const TotalMoney = ({ listTransactions }) => {
   return (
     <div className="total-money-div">
       <div>
@@ -17,5 +17,3 @@ const TotalMoney = ({ listTransactions }) => {
     </div>
   );
 };
-
-export default TotalMoney;

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import FilterButton from "../Button";
-import Card from "../Card";
+import { FilterButton } from "../Button";
+import { Card } from "../Card";
 import { NoCard } from "../NoCard";
 import "./style.css";
 
-const List = ({ listTransactions, setListTransactions }) => {
+export const List = ({ listTransactions, setListTransactions }) => {
   const [filter, setFilter] = useState("");
 
   const filtered = listTransactions.filter((transaction) =>
@@ -46,5 +46,3 @@ const List = ({ listTransactions, setListTransactions }) => {
     </>
   );
 };
-
-export default List;

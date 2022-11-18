@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const FilterButton = ({ setFilter, type }) => {
+export const FilterButton = ({ setFilter, type }) => {
   return type === "Todos" ? (
     <button
       className="filter-btn"
@@ -76,5 +76,3 @@ export const InitialButton = ({ setPage }) => {
     </button>
   );
 };
-
-export default FilterButton;

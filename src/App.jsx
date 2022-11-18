@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import Form from "./components/Form";
+import { Form } from "./components/Form";
 import { Header } from "./components/Header";
 import { InitialPage } from "./components/InitialPage";
-import List from "./components/List";
-import TotalMoney from "./components/TotalMoney";
+import { List } from "./components/List";
+import { TotalMoney } from "./components/TotalMoney";
 
-const App = () => {
+export const App = () => {
   const [listTransactions, setListTransactions] = useState([]);
 
   const [page, setPage] = useState(true);
@@ -36,5 +36,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
