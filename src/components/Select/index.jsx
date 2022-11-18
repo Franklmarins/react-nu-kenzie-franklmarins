@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Select = ({ select, setSelect }) => {
+export const Select = ({ select, setSelect }) => {
   return (
     <div className="select-div">
       <label htmlFor="type">Tipo de valor</label>
@@ -16,5 +16,3 @@ const Select = ({ select, setSelect }) => {
     </div>
   );
 };
-
-export default Select;

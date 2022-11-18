@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Input = ({
+export const Input = ({
   description,
   descriptionInput,
   setDescriptionInput,
@@ -35,5 +35,3 @@ const Input = ({
     </div>
   );
 };
-
-export default Input;

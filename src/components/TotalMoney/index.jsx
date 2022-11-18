@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const TotalMoney = ({ listTransactions }) => {
+export const TotalMoney = ({ listTransactions }) => {
   return (
-    <div className="container total-money-div">
+    <div className="total-money-div">
       <div>
         <h3>Valor total:</h3>
         <p>O valor se refere ao saldo</p>
@@ -17,5 +17,3 @@ const TotalMoney = ({ listTransactions }) => {
     </div>
   );
 };
-
-export default TotalMoney;

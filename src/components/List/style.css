@@ -1,6 +1,9 @@
 .filter-div {
-  width: 90%;
-  max-width: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
 }
 .filter-div > h3 {
   font-size: var(--font-size-4);
@@ -16,18 +19,28 @@
 .transactions-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
-  gap: 32px;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.no-louch {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-1);
+  color: var(--grey-4);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .filter-div {
-    display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
   }
   .transactions-list {
-    gap: 16px;
+    width: 100%;
+    align-items: center;
+  }
+  .no-louch {
+    font-size: var(--font-size-4);
   }
 }

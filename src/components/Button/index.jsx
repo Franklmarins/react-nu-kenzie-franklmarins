@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-const FilterButton = ({ listTransactions, setListFiltered, type }) => {
+export const FilterButton = ({ setFilter, type }) => {
   return type === "Todos" ? (
     <button
       className="filter-btn"
       onClick={() => {
-        setListFiltered(listTransactions);
+        setFilter("");
       }}
     >
       {type}
@@ -15,7 +15,7 @@ const FilterButton = ({ listTransactions, setListFiltered, type }) => {
     <button
       className="filter-btn"
       onClick={() => {
-        setListFiltered(listTransactions.filter((e) => e.type === "entrada"));
+        setFilter("entrada");
       }}
     >
       {type}
@@ -24,7 +24,7 @@ const FilterButton = ({ listTransactions, setListFiltered, type }) => {
     <button
       className="filter-btn"
       onClick={() => {
-        setListFiltered(listTransactions.filter((e) => e.type === "saida"));
+        setFilter("saida");
       }}
     >
       {type}
@@ -51,8 +51,28 @@ export const ExcludeButton = ({ exclude, transaction }) => {
   );
 };
 
-export const StartButton = () => {
-  return <button className="start-btn">Inicio</button>;
+export const StartButton = ({ setPage }) => {
+  return (
+    <button
+      className="start-btn"
+      onClick={() => {
+        setPage(true);
+      }}
+    >
+      Inicio
+    </button>
+  );
 };
 
-export default FilterButton;
+export const InitialButton = ({ setPage }) => {
+  return (
+    <button
+      className="initial-btn"
+      onClick={() => {
+        setPage(false);
+      }}
+    >
+      Iniciar
+    </button>
+  );
+};

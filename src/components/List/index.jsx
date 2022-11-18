@@ -1,45 +1,48 @@
 import React, { useState } from "react";
-import FilterButton from "../Button";
-import Card from "../Card";
+import { FilterButton } from "../Button";
+import { Card } from "../Card";
+import { NoCard } from "../NoCard";
 import "./style.css";
 
-const List = ({ listTransactions, setListTransactions }) => {
-  const [listFiltered, setListFiltered] = useState(listTransactions);
+export const List = ({ listTransactions, setListTransactions }) => {
+  const [filter, setFilter] = useState("");
+
+  const filtered = listTransactions.filter((transaction) =>
+    transaction.type.includes(filter || transaction.type)
+  );
 
   return (
-    <section className="container">
+    <>
       <div className="filter-div">
         <h3>Resumo financeiro</h3>
         <div>
-          <FilterButton
-            listTransactions={listTransactions}
-            setListFiltered={setListFiltered}
-            type="Todos"
-          />
-          <FilterButton
-            listTransactions={listTransactions}
-            setListFiltered={setListFiltered}
-            type="Entradas"
-          />
-          <FilterButton
-            listTransactions={listTransactions}
-            setListFiltered={setListFiltered}
-            type="Despesas"
-          />
+          <FilterButton setFilter={setFilter} type="Todos" />
+          <FilterButton setFilter={setFilter} type="Entradas" />
+          <FilterButton setFilter={setFilter} type="Despesas" />
         </div>
       </div>
+
       <ul className="transactions-list">
-        {listTransactions.map((transaction, index) => (
-          <Card
-            transaction={transaction}
-            key={index}
-            listTransactions={listTransactions}
-            setListTransactions={setListTransactions}
-          />
-        ))}
+        {listTransactions.length > 0 ? (
+          filtered.map((transaction, index) => (
+            <Card
+              transaction={transaction}
+              key={index}
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
+          ))
+        ) : (
+          <>
+            <h2 className="no-louch">
+              Você ainda não possui nenhum lançamento
+            </h2>
+            <NoCard />
+            <NoCard />
+            <NoCard />
+          </>
+        )}
       </ul>
-    </section>
+    </>
   );
 };
-
-export default List;

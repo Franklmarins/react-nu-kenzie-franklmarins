@@ -1,31 +1,38 @@
 import { useState } from "react";
 import "./App.css";
-import Form from "./components/Form";
+import { Form } from "./components/Form";
 import { Header } from "./components/Header";
-import List from "./components/List";
-import TotalMoney from "./components/TotalMoney";
+import { InitialPage } from "./components/InitialPage";
+import { List } from "./components/List";
+import { TotalMoney } from "./components/TotalMoney";
 
-const App = () => {
+export const App = () => {
   const [listTransactions, setListTransactions] = useState([]);
 
-  return (
+  const [page, setPage] = useState(true);
+
+  return page ? (
+    <InitialPage setPage={setPage} />
+  ) : (
     <div className="App">
-      <Header />
-      <main>
-        <section>
+      <Header setPage={setPage} />
+      <main className="container">
+        <section className="form-section">
           <Form
             listTransactions={listTransactions}
             setListTransactions={setListTransactions}
           />
-          <TotalMoney listTransactions={listTransactions} />
+          {listTransactions.length > 0 ? (
+            <TotalMoney listTransactions={listTransactions} />
+          ) : null}
         </section>
-        <List
-          listTransactions={listTransactions}
-          setListTransactions={setListTransactions}
-        />
+        <section className="list-section">
+          <List
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+          />
+        </section>
       </main>
     </div>
   );
 };
-
-export default App;

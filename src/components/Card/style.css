@@ -1,12 +1,12 @@
 li {
-  width: 90%;
-  max-width: 560px;
+  width: 100%;
   list-style: none;
   display: flex;
   justify-content: space-between;
   padding: 10px 18px;
   background: var(--grey-1);
   border-radius: var(--border-radius-2);
+  box-shadow: 0px 4px 42px -12px rgba(0, 0, 0, 0.25);
 }
 .title-description-card > h3 {
   font-size: var(--font-size-4);
@@ -23,4 +23,10 @@ li {
   display: flex;
   align-items: center;
   gap: 27px;
+}
+
+@media (max-width: 1000px) {
+  li {
+    max-width: 363px;
+  }
 }

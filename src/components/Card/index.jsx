@@ -2,7 +2,7 @@ import React from "react";
 import { ExcludeButton } from "../Button";
 import "./style.css";
 
-const Card = ({
+export const Card = ({
   transaction,
   index,
   listTransactions,
@@ -18,7 +18,6 @@ const Card = ({
 
   return (
     <li
-      className="container"
       key={index}
       style={
         transaction.type === "entrada"
@@ -42,5 +41,3 @@ const Card = ({
     </li>
   );
 };
-
-export default Card;

@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { EnterValueButton } from "../Button";
-import Input from "../Input";
-import Select from "../Select";
+import { Input } from "../Input";
+import { Select } from "../Select";
 import "./style.css";
 
-const Form = ({ listTransactions, setListTransactions }) => {
+export const Form = ({ listTransactions, setListTransactions }) => {
   const [descriptionInput, setDescriptionInput] = useState("");
 
   const [valueInput, setValueInput] = useState("");
@@ -14,7 +14,6 @@ const Form = ({ listTransactions, setListTransactions }) => {
 
   return (
     <form
-      className="container"
       onSubmit={(event) => {
         event.preventDefault();
         setListTransactions([
@@ -55,5 +54,3 @@ const Form = ({ listTransactions, setListTransactions }) => {
     </form>
   );
 };
-
-export default Form;

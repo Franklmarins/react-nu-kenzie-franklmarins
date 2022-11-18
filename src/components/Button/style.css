@@ -5,7 +5,8 @@ button {
 
 .start-btn,
 .filter-btn,
-.enter-btn {
+.enter-btn,
+.initial-btn {
   padding: 0 15px;
   background: var(--grey-2);
   border: none;
@@ -21,13 +22,17 @@ button {
 }
 .start-btn:active,
 .filter-btn:focus,
-.enter-btn {
+.enter-btn,
+.initial-btn {
   background-color: var(--color-primary);
   color: var(--grey-1);
 }
 .start-btn {
   height: auto;
   padding: 10px 15px;
+}
+.initial-btn {
+  width: 241px;
 }
 
 .enter-btn:hover {
