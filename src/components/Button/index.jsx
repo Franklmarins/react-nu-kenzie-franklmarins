@@ -51,8 +51,30 @@ export const ExcludeButton = ({ exclude, transaction }) => {
   );
 };
 
-export const StartButton = () => {
-  return <button className="start-btn">Inicio</button>;
+export const StartButton = ({ setPage }) => {
+  return (
+    <button
+      className="start-btn"
+      onClick={() => {
+        setPage(true);
+      }}
+    >
+      Inicio
+    </button>
+  );
+};
+
+export const InitialButton = ({ setPage }) => {
+  return (
+    <button
+      className="initial-btn"
+      onClick={() => {
+        setPage(false);
+      }}
+    >
+      Iniciar
+    </button>
+  );
 };
 
 export default FilterButton;

@@ -1,13 +1,12 @@
-section {
-  margin-top: 39px;
-}
 .form-section {
+  margin-top: 39px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 45%;
 }
 .list-section {
+  margin-top: 39px;
   display: flex;
   flex-direction: column;
   width: 55%;
