@@ -10,8 +10,13 @@ export const TotalMoney = ({ listTransactions }) => {
       </div>
       <h3>
         {listTransactions
-          .map((transaction) => transaction.value)
-          .reduce((previus, current) => Number(previus) + Number(current), 0)
+          .reduce(
+            (previus, current) =>
+              current.type === "entrada"
+                ? previus + Number(current.value)
+                : previus - Number(current.value),
+            0
+          )
           .toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
       </h3>
     </div>
